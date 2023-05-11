@@ -1,0 +1,99 @@
+.hero {
+  background: #0A1226;
+  color: #fff;
+  @include size(padding, 80px 0 60px);  
+  position: relative;
+
+  .home & {
+    overflow: hidden;
+
+    @include breakpoint(lg) {
+      background: #0c1325;
+    }
+  }
+
+  &:after {
+    
+    @include breakpoint(md) {
+      background: url(../../assets/images/bg/square-pattern.svg) no-repeat center right;
+      background-size: cover;
+      content: "";
+      display: block;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+    }
+
+    @include breakpoint(lg) {
+      background-size: contain;
+
+      .home & {
+        display: none;
+      }
+    }
+  }
+
+  @include breakpoint(sm) {
+    @include size(min-height, 300px);
+    @include size(padding, 120px 0 80px);
+  }
+
+  @include breakpoint(md) {
+    align-items: center;
+    display: flex;
+    @include size(min-height, 450px);
+    @include size(padding, 150px 0);
+  }
+
+  @include breakpoint(lg) {
+    @include size(min-height, 500px);
+
+    .home & {
+      @include size(min-height, 700px);
+    }
+
+  }
+
+  &-container {
+
+    .home & {
+      &:after {
+        @include breakpoint(lg) {
+          background: url(../../assets/images/bg/infor-os-composite.jpg) no-repeat center right;
+          background-size: cover;
+          content: "";
+          @include size(height, 700px);
+          left: 40%;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          @include size(width, 1500px);
+          z-index: 1;
+        }
+        @include breakpoint(xlg) {
+          left: 45%;
+        }
+      }
+    }
+  }
+
+  &-content {
+    position: relative;
+    z-index: 2;
+   
+
+    @include breakpoint(lg) {
+      @include size(max-width, 725px);
+    }
+  }
+
+  .text-block {
+    & + .btn {
+      @include size(margin-top, 20px);
+    }
+  }
+
+}

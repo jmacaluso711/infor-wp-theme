@@ -1,0 +1,67 @@
+// Breakpoint mixins
+
+@mixin breakpoint($viewport) {
+  @if $viewport == sm {
+    @media (min-width: (map-get($breakpoints, sm) + 1)) {
+      @content;
+    }
+  } @else if $viewport == md {
+    @media (min-width: (map-get($breakpoints, md) + 1)) {
+      @content;
+    }
+  } @else if $viewport == lg {
+    @media (min-width: (map-get($breakpoints, lg) + 1)) {
+      @content;
+    }
+  } @else if $viewport == xlg {
+    @media (min-width: (map-get($breakpoints, xlg) + 1)) {
+      @content;
+    }
+  }
+}
+
+@mixin size($property, $values) {
+  $px: ();
+  $rem: ();
+
+  @each $value in $values {
+    @if $value == 0 or $value == auto {
+      $rem: append($rem, $value);
+    } @else {
+      $unit: unit($value);
+      $val: parseInt($value);
+
+      @if $unit == 'px' {
+        $rem: append($rem, ($val * 0.1 + rem));
+      }
+
+      @if $unit == 'rem' {
+        $px: append($px, ($val * 10 + px));
+      }
+    }
+  }
+
+  @if $px == $rem {
+    #{$property}: $px;
+  } @else {
+    // #{$property}: $px;
+    #{$property}: $rem;
+  }
+}
+
+// Font-size mixins
+@mixin fontSize($sizeValue) {
+  font-size: ($sizeValue * 0.1) + rem;
+}
+
+// Screenreader mixins
+@mixin screenreader {
+  border: none;
+  clip: rect(0px, 0px, 0px, 0px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}

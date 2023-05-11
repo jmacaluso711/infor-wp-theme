@@ -1,0 +1,29 @@
+.wrapper {
+  margin: 0 auto;
+  @include size(padding-left, map-get($spacing, xsm));
+  @include size(padding-right, map-get($spacing, xsm));
+  position: relative;
+  width: 100%;
+
+  @include breakpoint(sm) {
+    @include size(padding-left, map-get($spacing, sm));
+    @include size(padding-right, map-get($spacing, sm));
+  }
+
+  @include breakpoint(md) {
+    @include size(padding-left, map-get($spacing, md));
+    @include size(padding-right, map-get($spacing, md));
+  }
+
+  @include breakpoint(lg) {
+    @include size(padding-left, map-get($spacing, lg));
+    @include size(padding-right, map-get($spacing, lg));
+  }
+
+  @include breakpoint(xlg) {
+    max-width: $wrapper-max-width;
+    @include size(padding-left, map-get($spacing, xlg));
+    @include size(padding-right, map-get($spacing, xlg));
+  }
+
+}

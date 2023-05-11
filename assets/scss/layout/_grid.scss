@@ -1,0 +1,897 @@
+.grid {
+  position: relative;
+  
+  &.--ultra-reduced {
+
+    & > .row {
+      @include size(margin-bottom, -($grid-gutter * map-get($grid-spacing, ultra-reduced)));
+      @include size(margin-left, -($grid-gutter * map-get($grid-spacing, ultra-reduced) * 0.5));
+      @include size(margin-right, -($grid-gutter * map-get($grid-spacing, ultra-reduced) * 0.5));
+  
+      @include breakpoint(md) {
+        @include size(
+          margin-bottom,
+          -($grid-gutter * (map-get($grid-spacing, ultra-reduced) * $grid-gutter-modifier))
+        );
+        @include size(
+          margin-left,
+          -($grid-gutter * (map-get($grid-spacing, ultra-reduced) * $grid-gutter-modifier) * 0.5)
+        );
+        @include size(
+          margin-right,
+          -($grid-gutter * (map-get($grid-spacing, ultra-reduced) * $grid-gutter-modifier) * 0.5)
+        );
+      }
+
+      & + .row {
+        @include size(margin-top, $grid-gutter * map-get($grid-spacing, ultra-reduced));
+
+        @include breakpoint(md) {
+          @include size(
+            margin-top,
+            $grid-gutter * (map-get($grid-spacing, ultra-reduced) * $grid-gutter-modifier)
+          );
+        }
+      }
+
+      & > .col {
+        @include size(padding-left, ($grid-gutter * map-get($grid-spacing, ultra-reduced) * 0.5));
+        @include size(padding-right, ($grid-gutter * map-get($grid-spacing, ultra-reduced) * 0.5));
+        @include size(margin-bottom, $grid-gutter * map-get($grid-spacing, ultra-reduced));
+    
+        @include breakpoint(md) {
+          @include size(
+            padding-left,
+            ($grid-gutter * (map-get($grid-spacing, ultra-reduced) * $grid-gutter-modifier) * 0.5)
+          );
+          @include size(
+            padding-right,
+            ($grid-gutter * (map-get($grid-spacing, ultra-reduced) * $grid-gutter-modifier) * 0.5)
+          );
+          @include size(
+            margin-bottom,
+            $grid-gutter * (map-get($grid-spacing, ultra-reduced) * $grid-gutter-modifier)
+          );
+        }
+      }
+    }
+
+  }
+
+  &.--reduced {
+
+    & > .row {
+      @include size(margin-bottom, -($grid-gutter * map-get($grid-spacing, reduced)));
+      @include size(margin-left, -($grid-gutter * map-get($grid-spacing, reduced) * 0.5));
+      @include size(margin-right, -($grid-gutter * map-get($grid-spacing, reduced) * 0.5));
+
+      @include breakpoint(md) {
+        @include size(
+          margin-bottom,
+          -($grid-gutter * (map-get($grid-spacing, reduced) * $grid-gutter-modifier))
+        );
+        @include size(
+          margin-left,
+          -($grid-gutter * (map-get($grid-spacing, reduced) * $grid-gutter-modifier) * 0.5)
+        );
+        @include size(
+          margin-right,
+          -($grid-gutter * (map-get($grid-spacing, reduced) * $grid-gutter-modifier) * 0.5)
+        );
+      }
+
+      & + .row {
+        @include size(margin-top, $grid-gutter * map-get($grid-spacing, reduced));
+
+        @include breakpoint(md) {
+          @include size(
+            margin-top,
+            $grid-gutter * (map-get($grid-spacing, reduced) * $grid-gutter-modifier)
+          );
+        }
+      }
+
+      & > .col {
+        @include size(padding-left, ($grid-gutter * map-get($grid-spacing, reduced) * 0.5));
+        @include size(padding-right, ($grid-gutter * map-get($grid-spacing, reduced) * 0.5));
+        @include size(margin-bottom, $grid-gutter * map-get($grid-spacing, reduced));
+
+        @include breakpoint(md) {
+          @include size(
+            padding-left,
+            ($grid-gutter * (map-get($grid-spacing, reduced) * $grid-gutter-modifier) * 0.5)
+          );
+          @include size(
+            padding-right,
+            ($grid-gutter * (map-get($grid-spacing, reduced) * $grid-gutter-modifier) * 0.5)
+          );
+          @include size(
+            margin-bottom,
+            $grid-gutter * (map-get($grid-spacing, reduced) * $grid-gutter-modifier)
+          );
+        }
+      }
+    }
+
+  }
+
+  &.--spaced {
+
+    & > .row {
+      @include size(margin-bottom, -($grid-gutter * map-get($grid-spacing, spaced)));
+      @include size(margin-left, -($grid-gutter * map-get($grid-spacing, spaced) * 0.5));
+      @include size(margin-right, -($grid-gutter * map-get($grid-spacing, spaced) * 0.5));
+
+      @include breakpoint(md) {
+        @include size(
+          margin-bottom,
+          -($grid-gutter * (map-get($grid-spacing, spaced) * $grid-gutter-modifier))
+        );
+        @include size(
+          margin-left,
+          -($grid-gutter * (map-get($grid-spacing, spaced) * $grid-gutter-modifier) * 0.5)
+        );
+        @include size(
+          margin-right,
+          -($grid-gutter * (map-get($grid-spacing, spaced) * $grid-gutter-modifier) * 0.5)
+        );
+      }
+
+      & + .row {
+        @include size(margin-top, $grid-gutter * map-get($grid-spacing, spaced));
+
+        @include breakpoint(md) {
+          @include size(
+            margin-top,
+            $grid-gutter * (map-get($grid-spacing, spaced) * $grid-gutter-modifier)
+          );
+        }
+      }
+
+      & > .col {
+        @include size(padding-left, ($grid-gutter * map-get($grid-spacing, spaced) * 0.5));
+        @include size(padding-right, ($grid-gutter * map-get($grid-spacing, spaced) * 0.5));
+        @include size(margin-bottom, $grid-gutter * map-get($grid-spacing, spaced));
+    
+        @include breakpoint(md) {
+          @include size(
+            padding-left,
+            ($grid-gutter * (map-get($grid-spacing, spaced) * $grid-gutter-modifier) * 0.5)
+          );
+          @include size(
+            padding-right,
+            ($grid-gutter * (map-get($grid-spacing, spaced) * $grid-gutter-modifier) * 0.5)
+          );
+          @include size(
+            margin-bottom,
+            $grid-gutter * (map-get($grid-spacing, spaced) * $grid-gutter-modifier)
+          );
+        }
+      }
+    }
+
+  }
+
+  &.--ultra-spaced {
+
+    & > .row {
+      @include size(margin-bottom, -($grid-gutter * map-get($grid-spacing, ultra-spaced)));
+      @include size(margin-left, -($grid-gutter * map-get($grid-spacing, ultra-spaced) * 0.5));
+      @include size(margin-right, -($grid-gutter * map-get($grid-spacing, ultra-spaced) * 0.5));
+  
+      @include breakpoint(md) {
+        @include size(
+          margin-bottom,
+          -($grid-gutter * (map-get($grid-spacing, ultra-spaced) * $grid-gutter-modifier))
+        );
+        @include size(
+          margin-left,
+          -($grid-gutter * (map-get($grid-spacing, ultra-spaced) * $grid-gutter-modifier) * 0.5)
+        );
+        @include size(
+          margin-right,
+          -($grid-gutter * (map-get($grid-spacing, ultra-spaced) * $grid-gutter-modifier) * 0.5)
+        );
+      }
+
+      & + .row {
+        @include size(margin-top, $grid-gutter * map-get($grid-spacing, spaced));
+
+        @include breakpoint(md) {
+          @include size(
+            margin-top,
+            $grid-gutter * (map-get($grid-spacing, spaced) * $grid-gutter-modifier)
+          );
+        }
+  
+      }
+
+      & > .col {
+        @include size(padding-left, ($grid-gutter * map-get($grid-spacing, ultra-spaced) * 0.5));
+        @include size(padding-right, ($grid-gutter * map-get($grid-spacing, ultra-spaced) * 0.5));
+        @include size(margin-bottom, $grid-gutter * map-get($grid-spacing, ultra-spaced));
+
+        @include breakpoint(md) {
+          @include size(
+            padding-left,
+            ($grid-gutter * (map-get($grid-spacing, ultra-spaced) * $grid-gutter-modifier) * 0.5)
+          );
+          @include size(
+            padding-right,
+            ($grid-gutter * (map-get($grid-spacing, ultra-spaced) * $grid-gutter-modifier) * 0.5)
+          );
+          @include size(
+            margin-bottom,
+            $grid-gutter * (map-get($grid-spacing, ultra-spaced) * $grid-gutter-modifier)
+          );
+        }
+      }
+    }
+
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  @include size(margin-bottom, -($grid-gutter));
+  @include size(margin-left, -($grid-gutter * 0.5));
+  @include size(margin-right, -($grid-gutter * 0.5));
+  position: relative;
+
+  // change gutter at 'md' breakpoint
+  @include breakpoint(md) {
+    @include size(margin-bottom, -($grid-gutter * $grid-gutter-modifier));
+    @include size(margin-left, -(($grid-gutter * $grid-gutter-modifier) * 0.5));
+    @include size(margin-right, -(($grid-gutter * $grid-gutter-modifier) * 0.5));
+  }
+
+  & + .row {
+    @include size(margin-top, $grid-gutter);
+
+    @include breakpoint(md) {
+      @include size(margin-top, $grid-gutter * $grid-gutter-modifier);
+    }
+  }
+
+  &.--rm-gutter {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  &.--rm-mb {
+    margin-bottom: 0!important;
+  }
+
+  // alignment modifiers
+  &.--reverse {
+    flex-direction: row-reverse;
+  }
+  &.--h {
+    &-start {
+      justify-content: flex-start;
+    }
+    &-center {
+      justify-content: center;
+    }
+    &-end {
+      justify-content: flex-end;
+    }
+    &-space-between{
+      justify-content: space-between;
+    }
+  }
+  &.--v {
+    &-start {
+      align-items: flex-start;
+    }
+    &-center {
+      align-items: center;
+    }
+    &-end {
+      align-items: flex-end;
+    }
+  }
+
+  @include breakpoint(sm) {
+    &.--sm {
+      &-reverse {
+        flex-direction: row-reverse;
+      }
+      &-h {
+        &-start {
+          justify-content: flex-start;
+        }
+        &-center {
+          justify-content: center;
+        }
+        &-end {
+          justify-content: flex-end;
+        }
+      }
+      &-v {
+        &-start {
+          align-items: flex-start;
+        }
+        &-center {
+          align-items: center;
+        }
+        &-end {
+          align-items: flex-end;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(md) {
+    &.--md {
+      &-reverse {
+        flex-direction: row-reverse;
+      }
+      &-h {
+        &-start {
+          justify-content: flex-start;
+        }
+        &-center {
+          justify-content: center;
+        }
+        &-end {
+          justify-content: flex-end;
+        }
+      }
+      &-v {
+        &-start {
+          align-items: flex-start;
+        }
+        &-center {
+          align-items: center;
+        }
+        &-end {
+          align-items: flex-end;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(lg) {
+    &.--lg {
+      &-reverse {
+        flex-direction: row-reverse;
+      }
+      &-h {
+        &-start {
+          justify-content: flex-start;
+        }
+        &-center {
+          justify-content: center;
+        }
+        &-end {
+          justify-content: flex-end;
+        }
+      }
+      &-v {
+        &-start {
+          align-items: flex-start;
+        }
+        &-center {
+          align-items: center;
+        }
+        &-end {
+          align-items: flex-end;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(xlg) {
+    &.--xlg {
+      &-reverse {
+        flex-direction: row-reverse;
+      }
+      &-h {
+        &-start {
+          align-items: flex-start;
+        }
+        &-center {
+          align-items: center;
+        }
+        &-end {
+          align-items: flex-end;
+        }
+      }
+      &-v {
+        &-start {
+          justify-content: flex-start;
+        }
+        &-center {
+          justify-content: center;
+        }
+        &-end {
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}
+
+.col {
+  @include size(margin-bottom, $grid-gutter);
+  @include size(padding-left, ($grid-gutter * 0.5));
+  @include size(padding-right, ($grid-gutter * 0.5));
+  flex: 1 0 100%;
+  max-width: 100%;
+
+  // change gutter at 'md' breakpoint
+  @include breakpoint(md) {
+    @include size(margin-bottom, $grid-gutter * $grid-gutter-modifier);
+    @include size(padding-left, ($grid-gutter * $grid-gutter-modifier) * 0.5);
+    @include size(padding-right, ($grid-gutter * $grid-gutter-modifier) * 0.5);
+  }
+
+  &.--display-md {
+    display: none;
+
+    @include breakpoint(md) {
+      display: block;
+    }
+  }
+  
+
+  &-1 {
+    flex: 1 0 percentage(1/12);
+    max-width: percentage(1/12);
+  }
+  &-2 {
+    flex: 1 0 percentage(2/12);
+    max-width: percentage(2/12);
+  }
+  &-3 {
+    flex: 1 0 percentage(3/12);
+    max-width: percentage(3/12);
+  }
+  &-4 {
+    flex: 1 0 percentage(4/12);
+    max-width: percentage(4/12);
+  }
+  &-5 {
+    flex: 1 0 percentage(5/12);
+    max-width: percentage(5/12);
+  }
+  &-6 {
+    flex: 1 0 percentage(6/12);
+    max-width: percentage(6/12);
+  }
+  &-7 {
+    flex: 1 0 percentage(7/12);
+    max-width: percentage(7/12);
+  }
+  &-8 {
+    flex: 1 0 percentage(8/12);
+    max-width: percentage(8/12);
+  }
+  &-9 {
+    flex: 1 0 percentage(9/12);
+    max-width: percentage(9/12);
+  }
+  &-10 {
+    flex: 1 0 percentage(10/12);
+    max-width: percentage(10/12);
+  }
+  &-11 {
+    flex: 1 0 percentage(11/12);
+    max-width: percentage(11/12);
+  }
+  &-1-5 {
+    flex: 1 0 percentage(1/5);
+    max-width: percentage(1/5);
+  }
+
+  // alignment
+  &.--h {
+    &-start {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+    }
+    &-center {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+    &-end {
+      align-items: flex-end;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &.--v {
+    &-start {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    &-center {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &-end {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+  }
+
+  // "sm" breakpoint overrides
+  @include breakpoint(sm) {
+    &.--sm {
+      &-1 {
+        flex: 1 0 percentage(1/12);
+        max-width: percentage(1/12);
+      }
+      &-2 {
+        flex: 1 0 percentage(2/12);
+        max-width: percentage(2/12);
+      }
+      &-3 {
+        flex: 1 0 percentage(3/12);
+        max-width: percentage(3/12);
+      }
+      &-4 {
+        flex: 1 0 percentage(4/12);
+        max-width: percentage(4/12);
+      }
+      &-5 {
+        flex: 1 0 percentage(5/12);
+        max-width: percentage(5/12);
+      }
+      &-6 {
+        flex: 1 0 percentage(6/12);
+        max-width: percentage(6/12);
+      }
+      &-7 {
+        flex: 1 0 percentage(7/12);
+        max-width: percentage(7/12);
+      }
+      &-8 {
+        flex: 1 0 percentage(8/12);
+        max-width: percentage(8/12);
+      }
+      &-9 {
+        flex: 1 0 percentage(9/12);
+        max-width: percentage(9/12);
+      }
+      &-10 {
+        flex: 1 0 percentage(10/12);
+        max-width: percentage(10/12);
+      }
+      &-11 {
+        flex: 1 0 percentage(11/12);
+        max-width: percentage(11/12);
+      }
+      &-12 {
+        flex: 1 0 percentage(12/12);
+        max-width: percentage(12/12);
+      }
+      &-1-5 {
+        flex: 1 0 percentage(1/5);
+        max-width: percentage(1/5);
+      }
+
+      &-h {
+        &-start {
+          align-items: flex-start;
+          display: flex;
+          flex-direction: column;
+        }
+        &-center {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+        }
+        &-end {
+          align-items: flex-end;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      &-v {
+        &-start {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+        }
+        &-center {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        &-end {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+
+  // "md" breakpoint overrides
+  @include breakpoint(md) {
+    &.--md {
+      &-1 {
+        flex: 1 0 percentage(1/12);
+        max-width: percentage(1/12);
+      }
+      &-2 {
+        flex: 1 0 percentage(2/12);
+        max-width: percentage(2/12);
+      }
+      &-3 {
+        flex: 1 0 percentage(3/12);
+        max-width: percentage(3/12);
+      }
+      &-4 {
+        flex: 1 0 percentage(4/12);
+        max-width: percentage(4/12);
+      }
+      &-5 {
+        flex: 1 0 percentage(5/12);
+        max-width: percentage(5/12);
+      }
+      &-6 {
+        flex: 1 0 percentage(6/12);
+        max-width: percentage(6/12);
+      }
+      &-7 {
+        flex: 1 0 percentage(7/12);
+        max-width: percentage(7/12);
+      }
+      &-8 {
+        flex: 1 0 percentage(8/12);
+        max-width: percentage(8/12);
+      }
+      &-9 {
+        flex: 1 0 percentage(9/12);
+        max-width: percentage(9/12);
+      }
+      &-10 {
+        flex: 1 0 percentage(10/12);
+        max-width: percentage(10/12);
+      }
+      &-11 {
+        flex: 1 0 percentage(11/12);
+        max-width: percentage(11/12);
+      }
+      &-12 {
+        flex: 1 0 percentage(12/12);
+        max-width: percentage(12/12);
+      }
+      &-1-5 {
+        flex: 1 0 percentage(1/5);
+        max-width: percentage(1/5);
+      }
+
+      &-h {
+        &-start {
+          align-items: flex-start;
+          display: flex;
+          flex-direction: column;
+        }
+        &-center {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+        }
+        &-end {
+          align-items: flex-end;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      &-v {
+        &-start {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+        }
+        &-center {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        &-end {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+
+  // "lg" breakpoint overrides
+  @include breakpoint(lg) {
+    &.--lg {
+      &-1 {
+        flex: 1 0 percentage(1/12);
+        max-width: percentage(1/12);
+      }
+      &-2 {
+        flex: 1 0 percentage(2/12);
+        max-width: percentage(2/12);
+      }
+      &-3 {
+        flex: 1 0 percentage(3/12);
+        max-width: percentage(3/12);
+      }
+      &-4 {
+        flex: 1 0 percentage(4/12);
+        max-width: percentage(4/12);
+      }
+      &-5 {
+        flex: 1 0 percentage(5/12);
+        max-width: percentage(5/12);
+      }
+      &-6 {
+        flex: 1 0 percentage(6/12);
+        max-width: percentage(6/12);
+      }
+      &-7 {
+        flex: 1 0 percentage(7/12);
+        max-width: percentage(7/12);
+      }
+      &-8 {
+        flex: 1 0 percentage(8/12);
+        max-width: percentage(8/12);
+      }
+      &-9 {
+        flex: 1 0 percentage(9/12);
+        max-width: percentage(9/12);
+      }
+      &-10 {
+        flex: 1 0 percentage(10/12);
+        max-width: percentage(10/12);
+      }
+      &-11 {
+        flex: 1 0 percentage(11/12);
+        max-width: percentage(11/12);
+      }
+      &-12 {
+        flex: 1 0 percentage(12/12);
+        max-width: percentage(12/12);
+      }
+      &-1-5 {
+        flex: 1 0 percentage(1/5);
+        max-width: percentage(1/5);
+      }
+
+      &-h {
+        &-start {
+          align-items: flex-start;
+          display: flex;
+          flex-direction: column;
+        }
+        &-center {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+        }
+        &-end {
+          align-items: flex-end;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      &-v {
+        &-start {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+        }
+        &-center {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        &-end {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+
+  // "xlg" breakpoint overrides
+  @include breakpoint(xlg) {
+    &.--xlg {
+      &-1 {
+        flex: 1 0 percentage(1/12);
+        max-width: percentage(1/12);
+      }
+      &-2 {
+        flex: 1 0 percentage(2/12);
+        max-width: percentage(2/12);
+      }
+      &-3 {
+        flex: 1 0 percentage(3/12);
+        max-width: percentage(3/12);
+      }
+      &-4 {
+        flex: 1 0 percentage(4/12);
+        max-width: percentage(4/12);
+      }
+      &-5 {
+        flex: 1 0 percentage(5/12);
+        max-width: percentage(5/12);
+      }
+      &-6 {
+        flex: 1 0 percentage(6/12);
+        max-width: percentage(6/12);
+      }
+      &-7 {
+        flex: 1 0 percentage(7/12);
+        max-width: percentage(7/12);
+      }
+      &-8 {
+        flex: 1 0 percentage(8/12);
+        max-width: percentage(8/12);
+      }
+      &-9 {
+        flex: 1 0 percentage(9/12);
+        max-width: percentage(9/12);
+      }
+      &-10 {
+        flex: 1 0 percentage(10/12);
+        max-width: percentage(10/12);
+      }
+      &-11 {
+        flex: 1 0 percentage(11/12);
+        max-width: percentage(11/12);
+      }
+      &-12 {
+        flex: 1 0 percentage(12/12);
+        max-width: percentage(12/12);
+      }
+      &-1-5 {
+        flex: 1 0 percentage(1/5);
+        max-width: percentage(1/5);
+      }
+
+      &-h {
+        &-start {
+          align-items: flex-start;
+          display: flex;
+          flex-direction: column;
+        }
+        &-center {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+        }
+        &-end {
+          align-items: flex-end;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      &-v {
+        &-start {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+        }
+        &-center {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        &-end {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}

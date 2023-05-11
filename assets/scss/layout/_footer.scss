@@ -1,0 +1,60 @@
+.footer {
+  background: #00111F;
+  color: #fff;
+  @include size(padding, 20px 0);
+
+  @include breakpoint(md) {
+    @include size(padding, 40px 0);
+  }
+
+  @include breakpoint(lg) {
+    @include size(padding, 60px 0);
+  }
+
+  &-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-brand {
+    display: block;
+    @include size(height, 40px);
+    @include size(width, 40px);
+
+    @include breakpoint(sm) {
+      @include size(height, 50px);
+      @include size(width, 50px);
+    }
+
+    @include breakpoint(lg) {
+      @include size(height, 60px);
+      @include size(width, 60px);
+    }
+
+    & > svg {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &-nav {
+    &-list {
+      align-items: center;
+      display: flex;
+
+      & > li {
+        @include size(margin-right, 20px);
+
+        @include breakpoint(md) {
+          @include size(margin-right, 30px);
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

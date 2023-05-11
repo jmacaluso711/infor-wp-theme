@@ -1,0 +1,431 @@
+.header {
+	left: 0;
+	@include size(height, 60px);
+	position: absolute;
+	transition: all .3s;
+	top: 0;
+	width: 100%;
+	z-index: $z-index-header;
+
+	&.--sticky {
+		background: #0A1226;
+		position: fixed;
+		transform: translateY(0);
+	}
+
+	&.--hidden {
+		transform: translateY(-100%);
+	}
+
+	@include breakpoint(sm) {
+		@include size(height, 100px);
+		@include size(padding, 20px 0);
+	}
+
+	@include breakpoint(md) {
+		@include size(height, 150px);
+	}
+
+  & > .wrapper {
+    height: 100%;
+  }
+
+	&-brand {
+		display: block;
+		@include size(height, 20px);
+		@include size(width, 164px);
+
+		@include breakpoint(sm) {
+			@include size(height, 30px);
+			@include size(width, 245px);
+		}
+
+		@include breakpoint(lg) {
+			@include size(height, 35px);
+			@include size(width, 286px);
+		}
+
+		& > svg {
+			display: block;
+			height: 100%;
+			fill: #fff;
+			width: 100%;
+		}
+	}
+	&-container {
+		align-items: center;
+		display: flex;
+		height: 100%;
+		justify-content: space-between;
+		position: relative;
+
+		@include breakpoint(md) {
+			@include size(padding-right, 40px);
+		}
+	}
+
+	&-toggles {
+		align-items: center;
+		display: flex;
+		position: absolute;
+		@include size(right, -15px);
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: $z-index-header + 2;
+
+		@include breakpoint(md) {
+			right: 0;
+		}
+	}
+}
+
+.search-toggle {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14.64 14.58'%3E%3Cpath d='M14.64,13.2l-4.4-4.68c.55-.86,.87-1.88,.87-2.97C11.11,2.49,8.62,0,5.56,0S0,2.49,0,5.56s2.49,5.56,5.56,5.56c1.25,0,2.39-.42,3.32-1.11l4.31,4.58,1.46-1.37ZM5.56,9.11c-1.96,0-3.56-1.6-3.56-3.56s1.6-3.56,3.56-3.56,3.56,1.6,3.56,3.56-1.6,3.56-3.56,3.56Z' style='fill:%23fff;'/%3E%3C/svg%3E");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 18px 20px;
+	display: flex;
+	height: 4rem;
+	width: 4rem;
+
+	span {
+		text-indent: -9999px;
+	}
+
+	.menu-is-active & {
+		display: none;
+
+		@include breakpoint(md) {
+			display: flex;
+		}
+	}
+
+}
+
+.menu-toggle {
+	display: flex;
+	height: 4rem;
+	position: relative;
+	width: 4rem;
+
+	@include breakpoint(md) {
+		display: none;
+	}
+
+	span {
+		background: #fff;
+		border-radius: .2rem;
+		display: block;
+		height: .2rem;
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		text-indent: -9999px;
+		width: 2.5rem;
+
+		&:before,
+		&:after {
+			background: #fff;
+			border-radius: .2rem;
+			content: "";
+			display: block;
+			height: .2rem;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 2.5rem;
+
+			.menu-is-active & {
+				background: #00111f;
+			}
+		}
+
+		&:before {
+			transform: translateY(-.8rem);
+		}
+		&:after {
+			transform: translateY(.8rem);
+		}
+	}
+
+	&.is-active {
+
+		span {
+			background: transparent;
+
+			&:before {
+				transform: rotate(45deg) translateY(0);
+			}
+			&:after {
+				transform: rotate(-45deg) translateY(0);
+			}
+		}
+
+	}
+
+}
+.menu-is-active {
+	overflow-y: hidden;
+
+	@include breakpoint(md) {
+		overflow-y: auto;
+	}
+}
+.menu {
+	background: #F4F4F4;
+	display: none;
+	height: 100vh;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: $z-index-header + 1;
+
+	&.is-active {
+		display: block;
+	}
+
+	@include breakpoint(md) {
+		background: transparent;
+		display: block;
+		height: auto;
+		overflow: inherit;
+		position: relative;
+		top: auto;
+		width: auto;
+	}
+
+	&-search {
+		@include size(height, 60px);
+		@include size(padding, 10px 20px);
+
+		@include breakpoint(sm) {
+			@include size(height, 100px);
+			@include size(padding, 25px 20px);
+		}
+
+		&-container {
+			position: relative;
+			width: calc(100% - 25px);
+
+			@include breakpoint(sm) {
+				width: calc(100% - 35px);
+			}
+		}
+
+		&-input {
+			background: #f4f4f4;
+			border: 1px solid #00111F;
+			border-radius: 2px;
+			@include size(height, 40px);
+			@include size(padding, 5px 50px 5px 10px);
+			width: 100%;
+
+			@include breakpoint(sm) {
+				@include size(height, 50px);
+			}
+
+			&:focus {
+				background: #fff;
+			}
+		}
+		&-btn {
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14.64 14.58'%3E%3Cpath d='M14.64,13.2l-4.4-4.68c.55-.86,.87-1.88,.87-2.97C11.11,2.49,8.62,0,5.56,0S0,2.49,0,5.56s2.49,5.56,5.56,5.56c1.25,0,2.39-.42,3.32-1.11l4.31,4.58,1.46-1.37ZM5.56,9.11c-1.96,0-3.56-1.6-3.56-3.56s1.6-3.56,3.56-3.56,3.56,1.6,3.56,3.56-1.6,3.56-3.56,3.56Z' style='fill:%2300111f;'/%3E%3C/svg%3E");
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: 18px 20px;
+			@include size(height, 40px);
+			text-indent: -9999px;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			@include size(width, 40px);
+		}
+
+		@include breakpoint(md) {
+			display: none;
+		}
+	}
+
+	&-list {
+		background: #fff;
+		height: calc(100% - 60px);
+		overflow-y: auto;
+
+		@include breakpoint(sm) {
+			height: calc(100% - 100px);
+		}
+		
+		@include breakpoint(md) {
+			align-items: center;
+			background: transparent;
+			display: flex;
+			height: auto;
+			overflow: inherit;
+		}
+
+	}
+
+	.menu-item {
+		border-bottom: 1px solid #F4F4F4;
+		@include fontSize(16);
+
+		@include breakpoint(md) {
+			border: none;
+			font-weight: 600;
+			@include size(margin-right, 20px);
+		}
+
+		@include breakpoint(lg) {
+			@include fontSize(18);
+			@include size(margin-right, 30px);
+		}
+
+		@include breakpoint(xlg) {
+			@include fontSize(20);
+			@include size(margin-right, 40px);
+		}
+
+		&.current-menu-item {
+			& > .menu-item-title {
+				& > a {
+					background: rgba(0, 92, 230, 0.2);
+					color: #005CE6;
+
+					@include breakpoint(md) {
+						background: transparent;
+						color: #fff;
+					}
+				}
+			}
+		}
+
+		&-title {
+			position: relative;
+
+			& > a {
+				color: #000;
+				display: block;
+				@include size(padding, 10px 60px 10px 20px);
+				text-decoration: none;
+
+				@include breakpoint(md) {
+					color: #fff;
+					padding: 0;
+					position: relative;
+
+					&:hover,
+					&:focus {
+						color: #d0d0d0;
+					}
+				}
+
+			}
+		}
+
+		.sub-menu {
+			.menu-item-title {
+				& > a {
+					@include size(padding-left, 40px);
+				}
+			}
+
+			.sub-menu {
+				.menu-item-title {
+					& > a {
+						@include size(padding-left, 60px);
+					}
+				}
+			}
+		}
+
+		.menu-item-toggle {
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13.48 6.74'%3E%3Cpath d='M13.49,.55L13.01,0,6.74,5.75,.47,0-.01,.55,6.74,6.74,13.49,.55Z' style='fill:%2300111f;'/%3E%3C/svg%3E");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 14px 7.5px;
+			height: 4rem;
+			position: absolute;
+			right: 0;
+			text-indent: -9999px;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 4rem;
+
+			@include breakpoint(md) {
+				display: none
+			}
+
+			&.is-active {
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13.48 6.74'%3E%3Cpath d='M6.74,0L-.01,6.19l.48,.56L6.74,.99l6.27,5.75,.48-.56L6.74,0Z' style='fill:%2300111f;'/%3E%3C/svg%3E");
+			}
+
+		}
+
+		&.current-menu-item, 
+		&.current-menu-ancestor {
+			.menu-item-title {
+				& > a {
+					&:after {
+						@include breakpoint(md) {
+							background: #fff;
+							@include size(bottom, -10px);
+							content: "";
+							@include size(height, 2px);
+							left: 0;
+							position: absolute;
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+
+	}
+
+	.sub-menu {
+		background: #fafafa;
+		border-top: 1px solid #F4F4F4;
+		display: none;
+	
+		&.is-active {
+			display: block;
+		}
+	
+		@include breakpoint(md) {
+			display: none!important;
+		}
+	
+		.menu-item {
+			@include fontSize(14);
+	
+			&:last-child {
+				border-bottom: none;
+			}
+	
+			&-toggle {
+				background-size: 10px 10px;
+			}
+	
+			&.current-menu-item {
+				& > .menu-item-title {
+					& > a {
+						background: rgba(0, 92, 230, 0.2);
+						color: #005CE6;
+	
+						@include breakpoint(md) {
+							background: transparent;
+							color: #fff;
+						}
+					}
+				}
+			}
+	
+		}
+	
+	}
+
+}
+

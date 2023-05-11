@@ -1,0 +1,220 @@
+.layer {
+  @include size(padding, (map-get($spacing, xsm) * map-get($layer-spacing, base)) 0);
+  position: relative;
+
+  @include breakpoint(sm) {
+    @include size(padding, (map-get($spacing, sm) * map-get($layer-spacing, base)) 0);
+  }
+  @include breakpoint(md) {
+    @include size(padding, (map-get($spacing, md) * map-get($layer-spacing, base)) 0);
+  }
+  @include breakpoint(lg) {
+    @include size(padding, (map-get($spacing, lg) * map-get($layer-spacing, base)) 0);
+  }
+  @include breakpoint(xlg) {
+    @include size(padding, (map-get($spacing, xlg) * map-get($layer-spacing, base)) 0);
+  }
+
+  &.--ultra-reduced {
+    @include size(padding, (map-get($spacing, xsm) * map-get($layer-spacing, ultra-reduced)) 0);
+  
+    @include breakpoint(sm) {
+      @include size(padding, (map-get($spacing, sm) * map-get($layer-spacing, ultra-reduced)) 0);
+    }
+    @include breakpoint(md) {
+      @include size(padding, (map-get($spacing, md) * map-get($layer-spacing, ultra-reduced)) 0);
+    }
+    @include breakpoint(lg) {
+      @include size(padding, (map-get($spacing, lg) * map-get($layer-spacing, ultra-reduced)) 0);
+    }
+    @include breakpoint(xlg) {
+      @include size(padding, (map-get($spacing, xlg) * map-get($layer-spacing, ultra-reduced)) 0);
+    }
+  }
+
+  &.--reduced {
+    @include size(padding, (map-get($spacing, xsm) * map-get($layer-spacing, reduced)) 0);
+  
+    @include breakpoint(sm) {
+      @include size(padding, (map-get($spacing, sm) * map-get($layer-spacing, reduced)) 0);
+    }
+    @include breakpoint(md) {
+      @include size(padding, (map-get($spacing, md) * map-get($layer-spacing, reduced)) 0);
+    }
+    @include breakpoint(lg) {
+      @include size(padding, (map-get($spacing, lg) * map-get($layer-spacing, reduced)) 0);
+    }
+    @include breakpoint(xlg) {
+      @include size(padding, (map-get($spacing, xlg) * map-get($layer-spacing, reduced)) 0);
+    }
+  }
+
+  &.--spaced {
+    @include size(padding, (map-get($spacing, xsm) * map-get($layer-spacing, spaced)) 0);
+  
+    @include breakpoint(sm) {
+      @include size(padding, (map-get($spacing, sm) * map-get($layer-spacing, spaced)) 0);
+    }
+    @include breakpoint(md) {
+      @include size(padding, (map-get($spacing, md) * map-get($layer-spacing, spaced)) 0);
+    }
+    @include breakpoint(lg) {
+      @include size(padding, (map-get($spacing, lg) * map-get($layer-spacing, spaced)) 0);
+    }
+    @include breakpoint(xlg) {
+      @include size(padding, (map-get($spacing, xlg) * map-get($layer-spacing, spaced)) 0);
+    }
+  }
+
+  &.--ultra-spaced {
+    @include size(padding, (map-get($spacing, xsm) * map-get($layer-spacing, ultra-spaced)) 0);
+  
+    @include breakpoint(sm) {
+      @include size(padding, (map-get($spacing, sm) * map-get($layer-spacing, ultra-spaced)) 0);
+    }
+    @include breakpoint(md) {
+      @include size(padding, (map-get($spacing, md) * map-get($layer-spacing, ultra-spaced)) 0);
+    }
+    @include breakpoint(lg) {
+      @include size(padding, (map-get($spacing, lg) * map-get($layer-spacing, ultra-spaced)) 0);
+    }
+    @include breakpoint(xlg) {
+      @include size(padding, (map-get($spacing, xlg) * map-get($layer-spacing, ultra-spaced)) 0);
+    }
+  }
+
+  &.--no-spaced{
+    @include size(padding, 0);
+  }
+
+  &.--contrast {
+    color: #fff;
+  }
+}
+
+.container {
+
+  &.--center {
+    margin: 0 auto;
+  }
+
+  &.--lg {
+    max-width: 120rem;
+  }
+
+  &.--md {
+    max-width: 90rem;
+  }
+
+  & + .container {
+    @include size(margin-top, map-get($spacing, xsm) * map-get($container-spacing, base));
+
+    @include breakpoint(sm) {
+      @include size(margin-top, map-get($spacing, sm) * map-get($container-spacing, base));
+    }
+    @include breakpoint(md) {
+      @include size(margin-top, map-get($spacing, md) * map-get($container-spacing, base));
+    }
+    @include breakpoint(lg) {
+      @include size(margin-top, map-get($spacing, lg) * map-get($container-spacing, base));
+    }
+    @include breakpoint(xlg) {
+      @include size(margin-top, map-get($spacing, xlg) * map-get($container-spacing, base));
+    }
+
+    &.--ultra-reduced {
+      @include size(
+        margin-top,
+        map-get($spacing, xsm) * map-get($container-spacing, ultra-reduced)
+      );
+
+      @include breakpoint(sm) {
+        @include size(
+          margin-top,
+          map-get($spacing, sm) * map-get($container-spacing, ultra-reduced)
+        );
+      }
+      @include breakpoint(md) {
+        @include size(
+          margin-top,
+          map-get($spacing, md) * map-get($container-spacing, ultra-reduced)
+        );
+      }
+      @include breakpoint(lg) {
+        @include size(
+          margin-top,
+          map-get($spacing, lg) * map-get($container-spacing, ultra-reduced)
+        );
+      }
+      @include breakpoint(xlg) {
+        @include size(
+          margin-top,
+          map-get($spacing, xlg) * map-get($container-spacing, ultra-reduced)
+        );
+      }
+    }
+
+    &.--reduced {
+      @include size(margin-top, map-get($spacing, xsm) * map-get($container-spacing, reduced));
+
+      @include breakpoint(sm) {
+        @include size(margin-top, map-get($spacing, sm) * map-get($container-spacing, reduced));
+      }
+      @include breakpoint(md) {
+        @include size(margin-top, map-get($spacing, md) * map-get($container-spacing, reduced));
+      }
+      @include breakpoint(lg) {
+        @include size(margin-top, map-get($spacing, lg) * map-get($container-spacing, reduced));
+      }
+      @include breakpoint(xlg) {
+        @include size(margin-top, map-get($spacing, xlg) * map-get($container-spacing, reduced));
+      }
+    }
+
+    &.--spaced {
+      @include size(margin-top, map-get($spacing, xsm) * map-get($container-spacing, spaced));
+
+      @include breakpoint(sm) {
+        @include size(margin-top, map-get($spacing, sm) * map-get($container-spacing, spaced));
+      }
+      @include breakpoint(md) {
+        @include size(margin-top, map-get($spacing, md) * map-get($container-spacing, spaced));
+      }
+      @include breakpoint(lg) {
+        @include size(margin-top, map-get($spacing, lg) * map-get($container-spacing, spaced));
+      }
+      @include breakpoint(xlg) {
+        @include size(margin-top, map-get($spacing, xlg) * map-get($container-spacing, spaced));
+      }
+    }
+
+    &.--ultra-spaced {
+      @include size(margin-top, map-get($spacing, xsm) * map-get($container-spacing, ultra-spaced));
+
+      @include breakpoint(sm) {
+        @include size(
+          margin-top,
+          map-get($spacing, sm) * map-get($container-spacing, ultra-spaced)
+        );
+      }
+      @include breakpoint(md) {
+        @include size(
+          margin-top,
+          map-get($spacing, md) * map-get($container-spacing, ultra-spaced)
+        );
+      }
+      @include breakpoint(lg) {
+        @include size(
+          margin-top,
+          map-get($spacing, lg) * map-get($container-spacing, ultra-spaced)
+        );
+      }
+      @include breakpoint(xlg) {
+        @include size(
+          margin-top,
+          map-get($spacing, xlg) * map-get($container-spacing, ultra-spaced)
+        );
+      }
+    }
+  }
+}
