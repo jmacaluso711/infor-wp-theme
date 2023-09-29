@@ -467,3 +467,28 @@ function remove_wp_block_library_css(){
 	wp_dequeue_style( 'global-styles' ); // REMOVE THEME.JSON
 }
 add_action( 'wp_enqueue_scripts', 'remove_wp_block_library_css', 100 );
+
+/* Get IDS Icons. Ex usage: <?php echo get_custom_icon('bullet-list'); ?> */
+function get_custom_icon($icon_name, $class_name= "") {
+	$json_data = file_get_contents(get_template_directory() . '/assets/svgs/path-data.json');
+	$icons = json_decode($json_data, true);
+
+	if (isset($icons[$icon_name])) {
+		return '<svg class="'. $class_name .'" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">' . $icons[$icon_name] . '</svg>';
+	}
+
+	return '';
+}
+
+// Register Custom Blocks
+add_action( 'init', 'register_acf_blocks' );
+function register_acf_blocks() {
+	register_block_type( __DIR__ . '/blocks/code-documentation', array(
+		'render_callback' => 'code_docs_api_render'
+	));
+	register_block_type( __DIR__ . '/blocks/code-demo');
+	register_block_type( __DIR__ . '/blocks/icons');
+	register_block_type( __DIR__ . '/blocks/design-tokens');
+}
+
+include_once get_template_directory() . '/blocks/code-documentation/code-docs-api-render.php';

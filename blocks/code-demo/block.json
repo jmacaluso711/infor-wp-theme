@@ -1,0 +1,14 @@
+{
+  "name": "acf/code-demo",
+  "title": "Code demo",
+  "description": "A custom code demo block.",
+  "category": "widgets",
+  "icon": "welcome-view-site",
+  "keywords": ["code-demo", "demo"],
+  "editorStyle": [ "file:./code-demo.css" ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "code-demo.php"
+  },
+  "align": "full"
+}

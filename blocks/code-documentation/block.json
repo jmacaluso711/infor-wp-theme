@@ -1,0 +1,14 @@
+{
+  "name": "acf/code-documentation",
+  "title": "Code documentation",
+  "description": "A custom code documentation block.",
+  "editorStyle": [ "file:./code-documentation.css" ],
+  "category": "widgets",
+  "icon": "admin-comments",
+  "keywords": ["code-documentation", "documentation"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "code-documentation.php"
+  },
+  "align": "full"
+}

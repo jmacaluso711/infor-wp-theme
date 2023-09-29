@@ -1,0 +1,14 @@
+{
+  "name": "acf/icons",
+  "title": "Icons",
+  "description": "A custom Icons block.",
+  "editorStyle": ["file:./icons.css"],
+  "script": ["file:./icons.js"],
+  "category": "widgets",
+  "icon": "button",
+  "keywords": ["icons", "search"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "icons.php"
+  }
+}

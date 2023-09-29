@@ -1,20 +1,21 @@
-@import 'helpers/variables';
-@import 'helpers/functions';
-@import 'helpers/mixins';
+@import "../../node_modules/ids-identity/dist/theme-new/tokens/web/theme-new.variables.css";
+@import "helpers/variables";
+@import "helpers/functions";
+@import "helpers/mixins";
 
-@import 'base/reset';
-@import 'base/base';
-@import 'base/typography';
-@import 'base/buttons';
+@import "base/reset";
+@import "base/base";
+@import "base/typography";
+@import "base/buttons";
+@import "base/jsdocs";
+@import "base/highlightjs";
 
-@import 'layout/header';
-@import 'layout/footer';
-@import 'layout/wrapper';
-@import 'layout/grid';
-@import 'layout/hero';
-@import 'layout/layer';
-@import 'layout/sidebar';
-@import 'layout/card';
-@import 'layout/slider';
-
-
+@import "layout/header";
+@import "layout/footer";
+@import "layout/wrapper";
+@import "layout/grid";
+@import "layout/hero";
+@import "layout/layer";
+@import "layout/sidebar";
+@import "layout/card";
+@import "layout/slider";

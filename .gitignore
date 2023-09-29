@@ -1,2 +1,4 @@
 .DS_Store
 .stylelintrc.json
+node_modules
+dist

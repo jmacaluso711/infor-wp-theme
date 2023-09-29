@@ -2,103 +2,103 @@
 $z-index-header: 1000;
 
 // breakpoints
-$breakpoints:(
+$breakpoints: (
   sm: 600px,
   md: 900px,
   lg: 1200px,
-  xlg: 1500px
+  xlg: 1500px,
 );
 
 // Grid gutter - (padding/margin) applied to rows & cols
 $grid-gutter-spaced: 1.5;
 $grid-gutter-ultra-spaced: 2;
-$grid-gutter-reduced: .5;
-$grid-gutter-ultra-reduced: .25;
+$grid-gutter-reduced: 0.5;
+$grid-gutter-ultra-reduced: 0.25;
 $grid-gutter-modifier: 1.5;
 $grid-gutter: 20px;
 
 // Grid spacing
-$grid-spacing:(
-  ultra-reduced: .25,
-  reduced: .5,
+$grid-spacing: (
+  ultra-reduced: 0.25,
+  reduced: 0.5,
   base: 1,
   spaced: 1.5,
-  ultra-spaced: 2
+  ultra-spaced: 2,
 );
-	
+
 // spacing
-$spacing:(
+$spacing: (
   xsm: 20px,
   sm: 30px,
   md: 40px,
   lg: 50px,
-  xlg: 60px
+  xlg: 60px,
 );
 
 // container spacing
-$container-spacing:(
-  ultra-reduced: .5,
+$container-spacing: (
+  ultra-reduced: 0.5,
   reduced: 1,
   base: 1.5,
   spaced: 2,
-  ultra-spaced: 2.5
+  ultra-spaced: 2.5,
 );
 
 // layer spacing
-$layer-spacing:(
-  ultra-reduced: .5, 
-  reduced: .75, 
-  base: 1, 
-  spaced: 2, 
-  ultra-spaced: 2.5 
+$layer-spacing: (
+  ultra-reduced: 0.5,
+  reduced: 0.75,
+  base: 1,
+  spaced: 2,
+  ultra-spaced: 2.5,
 );
 
 $content-max-width: 1400px; // max width of content (not including padding)
 $wrapper-max-width: $content-max-width + (map-get($spacing, xlg) * 2); // max width of wrapper
 
 // transition speed
-$transition-speed: .25s;
+$transition-speed: 0.25s;
 
 // colors
 
-$color-brand:(
-  'deep-ruby': #b3000c,
-  'red': #d5000e,
-  'light-ruby': #ff574d,
-  'deep-azure': #005ce6,
-  'azure': #13a3f7,
-  'light-azure': #61c5ff,
-  'cobalt': #004AB9,
-  'light-cyan-blue': #5F92DE,
-  'turquoise': #00c2b4,
-  'emerald': #2db329,
-  'amber': #ffaa00,
-  'amethyst': #a352cc,
-  'dark-graphite': #26292c,
-  'graphite': #666,
-  'light-graphite': #f6f5f5,
-  'black': #00111f,
-  'night': #161D2D,
-  'empathy': #A44141,
-  'friendship': #257F7F,
-  'positivity': #D07A3E,
-  'growth': #38A568,
-  'optimism': #D7A82B,
-  'knowledge': #2F59BC,
-  'inclusion': #814DC4,
-  'trust': #138AA4,
-  'white': #fff,
-  'clarity-canvas': #f3f2ef,
-  'clarity-midnight': #0A1226,
-  'clarity-stormcloud': #d0d0d0,
-  'clarity-overcast': #dfdfdf,
-  'clarity-cloud': #f4f4f4,
-  'clarity-mist': #fafafa
+$color-brand: (
+  "deep-ruby": #b3000c,
+  "red": #d5000e,
+  "light-ruby": #ff574d,
+  "deep-azure": #005ce6,
+  "azure": #13a3f7,
+  "light-azure": #61c5ff,
+  "cobalt": #004ab9,
+  "light-cyan-blue": #5f92de,
+  "turquoise": #00c2b4,
+  "emerald": #2db329,
+  "amber": #ffaa00,
+  "amethyst": #a352cc,
+  "dark-graphite": #26292c,
+  "graphite": #666,
+  "light-graphite": #f6f5f5,
+  "black": #00111f,
+  "night": #161d2d,
+  "empathy": #a44141,
+  "friendship": #257f7f,
+  "positivity": #d07a3e,
+  "growth": #38a568,
+  "optimism": #d7a82b,
+  "knowledge": #2f59bc,
+  "inclusion": #814dc4,
+  "trust": #138aa4,
+  "white": #fff,
+  "clarity-canvas": #f3f2ef,
+  "clarity-midnight": #0a1226,
+  "clarity-stormcloud": #d0d0d0,
+  "clarity-overcast": #dfdfdf,
+  "clarity-cloud": #f4f4f4,
+  "clarity-mist": #fafafa,
 );
 
 // fonts
-$font-source-sans-pro: 'Source Sans Pro', 'Helvetica', sans-serif;
-$font-montserrat: 'Montserrat', sans-serif;
+$font-source-sans-pro: "Source Sans Pro", "Helvetica", sans-serif;
+$font-montserrat: "Montserrat", sans-serif;
 
 // font assignments
 $font-primary: $font-source-sans-pro;
@@ -121,3 +121,19 @@ $base-line-height: 1.5;
 // heading
 $heading-font-family: $font-secondary;
 $heading-font-color: #000;
+
+// Design infor vars
+$azure-base: #0075e9;
+$graphite-lightest: #ecebed;
+$graphite-light: #efeff0;
+$slate-lightest: #f7f7f8;
+$slate-lighter: #d8d6db;
+$slate-light: #97979b;
+$slate-base: #98949e;
+$slate-darker: #6d6873;
+
+$headerHeight: 112px;
+$headerHeightMobile: 85px;
+
+$announcementHeight: 44px;
+$announcementHeightMobile: 75px;

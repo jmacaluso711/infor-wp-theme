@@ -1,0 +1,14 @@
+{
+  "name": "acf/design-tokens",
+  "title": "Design tokens",
+  "description": "A custom Design tokens block.",
+  "editorStyle": ["file:./design-tokens.css"],
+  "script": ["file:./design-tokens.js"],
+  "category": "widgets",
+  "icon": "tokens",
+  "keywords": ["icons", "tokens"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "design-tokens.php"
+  }
+}
